@@ -1,17 +1,17 @@
 window.onload = function(){
-    let paleta=document.getElementsByClassName('color');
-    let corUm=document.getElementById('cor-1');
-    let corDois=document.getElementById('cor-2');
-    let corTres=document.getElementById('cor-3');
-    let corQuatro=document.getElementById('cor-4');
-    let corSelecionada='rgb(0,0,0)';
-    let botãoLimpar=document.getElementById('clear-board');
-    let botaoCriaPixels=document.getElementById('generate-board');
-    let areaPixels=document.getElementById('pixel-board');
-    let qtdPixels=5;
-    let contaPixel=document.querySelectorAll('.pixel');
+    let paleta = document.getElementsByClassName('color');
+    let corUm = document.getElementById('cor-1');
+    let corDois = document.getElementById('cor-2');
+    let corTres = document.getElementById('cor-3');
+    let corQuatro = document.getElementById('cor-4');
+    let corSelecionada = 'rgb(0,0,0)';
+    let botãoLimpar = document.getElementById('clear-board');
+    let botaoCriaPixels = document.getElementById('generate-board');
+    let areaPixels = document.getElementById('pixel-board');
+    let qtdPixels = 5;
+    let contaPixel = document.querySelectorAll('.pixel');
 
-    function criaRGB(){        
+    function criaRGB(){
         let corR=parseInt((Math.random())*256);
         let corG=parseInt((Math.random())*256);
         let corB=parseInt((Math.random())*256);
@@ -20,17 +20,16 @@ window.onload = function(){
     
     function criaGrid(quantidade){
     if (contaPixel.length > 0){
-        for (i=0; i<contaPixel.length; i+=1){
+        for (i = 0; i < contaPixel.length; i += 1){
             contaPixel[i].remove();
         }
     }
-        for (i=1; i<=qtdPixels; i+=1){
+        for (i = 1; i <= qtdPixels; i += 1){
             let criaDivLinha=document.createElement('div');
                 areaPixels.appendChild(criaDivLinha);
-            for (j=1; j<=qtdPixels; j+=1){
+            for (j = 1; j <= qtdPixels; j += 1){
                 let criaDiv=document.createElement('div');
                 criaDiv.className='pixel';
-                // criaDiv.innerText=`${i}+${j}`;
                 areaPixels.appendChild(criaDiv);
                 }
         }
@@ -43,7 +42,7 @@ window.onload = function(){
 
     criaGrid(qtdPixels);
 
-    for (i=1; i<paleta.length; i+=1){
+    for (i = 1; i < paleta.length; i += 1){
         paleta[0].style.backgroundColor='rgb(0,0,0)';
         paleta[i].style.backgroundColor=criaRGB();
     }
@@ -86,7 +85,7 @@ window.onload = function(){
 
     botãoLimpar.addEventListener('click', function(){
         let selectDiv=document.querySelectorAll('.pixel');
-        for (i=0; i<selectDiv.length; i+=1){
+        for (i = 0; i < selectDiv.length; i += 1){
             selectDiv[i].style.backgroundColor='rgb(255,255,255';
         }
     })
@@ -95,12 +94,12 @@ window.onload = function(){
         let qtd=document.getElementById('board-size');
         contaPixel=document.querySelectorAll('.pixel');
         qtdPixels=qtd.value;
-        if (qtdPixels>=1){
-            if (qtdPixels<5){
-                qtdPixels=5;
+        if (qtdPixels >= 1){
+            if (qtdPixels < 5){
+                qtdPixels = 5;
             }
-            if (qtdPixels>50){
-                qtdPixels=50;
+            if (qtdPixels > 20){
+                qtdPixels = 20;
             }
             criaGrid(qtdPixels);
         } else {
