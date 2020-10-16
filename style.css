@@ -5,6 +5,8 @@
     border-color: rgb(0,0,0);
     border-width: 1px;
     border-style: solid;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 #clear-board{
@@ -19,4 +21,14 @@
     border-style: solid;
     border-color:rgb(0,0,0);
     display: inline-block;
+}
+
+#title {
+    text-align: center;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
 }
