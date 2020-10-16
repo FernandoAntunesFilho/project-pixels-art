@@ -25,10 +25,21 @@
 
 #title {
     text-align: center;
+    background-color: green;
 }
 
 #color-palette {
     display: flex;
     justify-content: center;
     background-color: blue;
+}
+
+#comandos-container {
+    background-color: red;
+    text-align: center;
+}
+
+#pixel-board {
+    text-align: center;
+    background-color: brown;
 }
