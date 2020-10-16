@@ -1,8 +1,13 @@
+body {
+    background-image: url(imgs/background.jpg);
+    background-size: cover;
+}
+
 .color{
     height: 40px;
     width: 40px;
     display: inline-block;
-    border-color: rgb(0,0,0);
+    border-color: rgb(255,255,255);
     border-width: 1px;
     border-style: solid;
     margin-left: 1px;
@@ -25,21 +30,19 @@
 
 #title {
     text-align: center;
-    background-color: green;
+    color: white;
 }
 
 #color-palette {
     display: flex;
     justify-content: center;
-    background-color: blue;
 }
 
 #comandos-container {
-    background-color: red;
     text-align: center;
+    color: white;
 }
 
 #pixel-board {
-    text-align: center;
-    background-color: brown;
+    text-align: center;    ;
 }
