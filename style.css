@@ -1,10 +1,17 @@
+body {
+    background-image: url(imgs/background.jpg);
+    background-size: cover;    
+}
+
 .color{
     height: 40px;
     width: 40px;
     display: inline-block;
-    border-color: rgb(0,0,0);
+    border-color: rgb(255,255,255);
     border-width: 1px;
     border-style: solid;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 #clear-board{
@@ -19,4 +26,31 @@
     border-style: solid;
     border-color:rgb(0,0,0);
     display: inline-block;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+}
+
+#comandos-container {
+    text-align: center;
+    color: white;
+}
+
+#pixel-board {
+    text-align: center;    ;
+}
+
+#rodape {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
 }
